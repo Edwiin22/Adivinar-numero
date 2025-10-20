@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Juego de Adivinar el Número</title>
+    <meta charset="UTF-8" />
+    <title>Adivina el número</title>
 </head>
 <body>
-    <h1>¡Adivina el número entre 1 y 100!</h1>
-    <p>{{ mensaje }}</p>
-    <p>Puntaje: {{ puntaje }}</p>
+    <h1>¡Adivina el número!</h1>
+    <p>Estoy pensando en un número del 1 al 10.</p>
     <form method="post" action="/adivinar">
-        <input type="number" name="numero" min="1" max="100" required>
-        <button>Enviar intento</button>
+        <input type="number" name="numero" min="1" max="10" required>
+        <button type="submit">Adivinar</button>
     </form>
-    <form method="post" action="/terminar">
-        <button>Terminar juego</button>
-    </form>
+    <p style="color:red;">{{ mensaje }}</p>
 </body>
 </html>
